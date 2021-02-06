@@ -59,6 +59,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-router": "^5.1.11"
+    "@types/react-router": "^5.1.11",
+    "generate-changelog": "^1.8.0"
   }
 }
