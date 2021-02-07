@@ -2,6 +2,7 @@ import { MapMarkerIcon } from "@brew-software/react-icons";
 import { Address, formatAddress } from "@brew-software/shared-models";
 import { makeStyles } from "@material-ui/core";
 import { CSSProperties } from "@material-ui/core/styles/withStyles";
+import { useLinkStyles } from "./+styles";
 
 type GoogleMapLinkProps = {
   location: Address;
@@ -9,21 +10,10 @@ type GoogleMapLinkProps = {
   style?: CSSProperties;
 
   classes?: {
-    marker?: string;
+    icon?: string;
     link?: string;
   };
 };
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    alignItems: "center",
-  },
-
-  marker: {
-    marginRight: theme.spacing(2),
-  },
-}));
 
 export default function GoogleMapLink({
   location,
@@ -31,18 +21,18 @@ export default function GoogleMapLink({
   style,
   classes = {},
 }: GoogleMapLinkProps) {
-  const mainClasses = useStyles();
+  const linkClasses = useLinkStyles();
   const locationFormat = formatAddress(location);
-  const { marker = "", link = "" } = classes;
+  const { icon = "", link = "" } = classes;
 
   return (
     <span
-      className={`${mainClasses.root} ${className ?? ""}`}
+      className={`${linkClasses.root} ${className ?? ""}`}
       style={{ ...style }}
     >
       <MapMarkerIcon
         type="solidAlt"
-        className={`${mainClasses.marker} ${marker}`}
+        className={`${linkClasses.marker} ${icon}`}
       />
       <a
         href={`https://maps.google.com/?q=${locationFormat}`}
