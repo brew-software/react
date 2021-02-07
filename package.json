@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "dependencies": {
-    "@brew-software/react-icons": "^1.1.0",
+    "@brew-software/react-icons": "^1.2.0",
     "@brew-software/shared-models": "^1.0.0",
     "@material-ui/core": "^4.11.3",
     "@testing-library/jest-dom": "^5.11.4",
