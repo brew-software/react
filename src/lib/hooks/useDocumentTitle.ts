@@ -4,7 +4,7 @@ export default function useDocumentTitle(title: string) {
   const previousTitle = useRef(document.title);
   useEffect(() => {
     const previous = previousTitle.current;
-    document.title = `Brew Admin - ${title}`;
+    document.title = title;
 
     return () => {
       document.title = previous;
