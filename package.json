@@ -1,6 +1,6 @@
 {
   "name": "@brew-software/react",
-  "version": "1.2.3",
+  "version": "1.3.0",
   "description": "React components and other stuff for brew apps",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
