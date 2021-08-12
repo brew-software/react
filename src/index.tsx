@@ -1,3 +1,4 @@
 import ReactDOM from "react-dom";
+import Examples from "./examples";
 
-ReactDOM.render(<div>Hello world</div>, document.getElementById("root"));
+ReactDOM.render(<Examples />, document.getElementById("root"));

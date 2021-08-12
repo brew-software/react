@@ -4,3 +4,4 @@ export * from "./links";
 export { default as LoadingIndicator } from "./loading-indicator";
 export * from "./modals";
 export * from "./routing";
+export { default as StatusChip } from "./status-chip";
